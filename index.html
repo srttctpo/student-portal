@@ -3,98 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Portal - Login & Registration</title>
+    <title>Student Portal - Welcome</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="container">
         <div class="form-container">
-            <div class="form-header">
-                <button class="tab-button active" id="loginTab" onclick="switchTab('login')">Login</button>
-                <button class="tab-button" id="registerTab" onclick="switchTab('register')">Register</button>
-            </div>
-
-            <!-- Login Form -->
-            <div id="loginForm" class="form-content active">
-                <h2>Student Login</h2>
-                <form onsubmit="handleLogin(event)">
-                    <div class="form-group">
-                        <label for="loginRoll">Roll Number</label>
-                        <input type="text" id="loginRoll" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="loginPassword">Password</label>
-                        <input type="password" id="loginPassword" required>
-                    </div>
-                    <button type="submit" class="btn-primary">Login</button>
-                </form>
-            </div>
-
-            <!-- Register Form -->
-            <div id="registerForm" class="form-content">
-                <h2>Student Registration</h2>
-                <form onsubmit="handleRegister(event)">
-                    <div class="form-group">
-                        <label for="name">Name *</label>
-                        <input type="text" id="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="photo">Photo *</label>
-                        <input type="file" id="photo" accept="image/*" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="department">Department *</label>
-                        <select id="department" required>
-                            <option value="">Select Department</option>
-                            <option value="Computer">Computer</option>
-                            <option value="AI&DS">AI&DS</option>
-                            <option value="CSEDS">CSEDS</option>
-                            <option value="Mech">Mech</option>
-                            <option value="Civil">Civil</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="session">Session *</label>
-                        <select id="session" required>
-                            <option value="">Select Session</option>
-                            <option value="FE">FE</option>
-                            <option value="SE">SE (including DSE)</option>
-                            <option value="TE">TE</option>
-                            <option value="BE">BE</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="rollNo">Roll Number *</label>
-                        <input type="text" id="rollNo" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Password *</label>
-                        <input type="password" id="password" required>
-                    </div>
-                    <button type="submit" class="btn-primary">Register</button>
-                </form>
+            <div class="welcome-section">
+                <h1>Welcome to Student Portal</h1>
+                <p>Student Registration and Login System</p>
+                
+                <div class="button-group">
+                    <a href="login.html" class="btn-primary">Login</a>
+                    <a href="register.html" class="btn-secondary">Register</a>
+                </div>
             </div>
         </div>
     </div>
-
-    <!-- Dialog Box for Messages -->
-    <div id="dialogOverlay" class="dialog-overlay" onclick="closeDialog()">
-        <div class="dialog-box" onclick="event.stopPropagation()">
-            <div class="dialog-header">
-                <h3 id="dialogTitle">Message</h3>
-                <button class="dialog-close" onclick="closeDialog()">&times;</button>
-            </div>
-            <div class="dialog-body">
-                <p id="dialogMessage"></p>
-            </div>
-            <div class="dialog-footer">
-                <button class="btn-primary" onclick="closeDialog()">OK</button>
-            </div>
-        </div>
-    </div>
-
+    
     <script src="js/strings.js"></script>
-    <script src="js/dialog.js"></script>
-    <script src="js/auth.js"></script>
 </body>
 </html>
